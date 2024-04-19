@@ -25,14 +25,8 @@ public class Vida : MonoBehaviour
             {
                 barraVida.vida += cantidad;
                 currentDamageTime = 0.0f;
+                Destroy(this.gameObject);
             }
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

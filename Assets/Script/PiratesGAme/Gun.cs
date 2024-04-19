@@ -21,7 +21,6 @@ public class Gun : MonoBehaviour
     private void FireGun(ActivateEventArgs arg) {
         GameObject tempBullet = Instantiate(bullet, spawner.position, Quaternion.identity);
         tempBullet.GetComponent<Rigidbody>().velocity = spawner.forward * bulletSpeed;
+        Destroy(tempBullet, 6);
     }
-
-    
 }

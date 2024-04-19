@@ -7,10 +7,16 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Transform player;
+    [SerializeField] float speed = 10f;
 
     public void SetPlayerTransform(Transform playerTransform)
     {
         this.player = playerTransform;
+    }
+
+    void Start()
+    {
+        agent.speed = speed;
     }
 
     void Update()
@@ -28,10 +34,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("Colisión con Jugador");
             //Destroy(other.gameObject);
-
         }
 
     }
-
-
 }

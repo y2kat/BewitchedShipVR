@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour //Hecho con ayuda del CHATGPT
+public class EnemySpawner : MonoBehaviour // Source: CHATGPT
 
 {
        public GameObject enemyPrefab; // Prefab del enemigo
     public Transform playerTransform; // Transform del jugador
     public float spawnInterval = 3f; // Intervalo de tiempo entre cada spawn
-    public int maxEnemies = 10; // Límite máximo de enemigos
+    public int maxEnemies = 5; // Límite máximo de enemigos
     public Vector3 spawnAreaSize = new Vector3(10f, 0f, 10f);
     private int currentEnemyCount = 0; // Contador de enemigos actuales
 
