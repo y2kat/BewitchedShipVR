@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Colisión con Jugador");
-            //Destroy(other.gameObject);
         }
 
     }

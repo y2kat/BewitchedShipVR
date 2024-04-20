@@ -28,6 +28,7 @@ public class Sword : MonoBehaviour
         {
             Debug.Log("Ghost hit");
             Destroy(other.gameObject);
+            GameManager.instance.enemiesDefeated++;
         }
     }
 }

@@ -25,7 +25,9 @@ public class Vida : MonoBehaviour
             {
                 barraVida.vida += cantidad;
                 currentDamageTime = 0.0f;
+
                 Destroy(this.gameObject);
+                Debug.Log("me destruía atte: ghost uwu");
             }
         }
     }

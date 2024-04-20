@@ -24,9 +24,7 @@ public class Bullets : MonoBehaviour
             Debug.Log("Colisión con Fantasma");
             Destroy(other.gameObject);
             Destroy(gameObject);
-        }
-
-        
+            GameManager.instance.enemiesDefeated++;
+        } 
     }
-
 }
