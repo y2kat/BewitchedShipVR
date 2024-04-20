@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour //source: CHATGPT uwu
     void Update()
     {
         // Actualiza el texto de enemigos derrotados y tiempo transcurrido
-        enemiesDefeatedText.text = GameManager.instance.enemiesDefeated + "/40";
+        enemiesDefeatedText.text = GameManager.instance.enemiesDefeated + "/10";
         timeElapsedText.text = "Time: " + Mathf.Round(GameManager.instance.timeElapsed) + "s";
     }
 }

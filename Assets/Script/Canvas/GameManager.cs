@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Si se han derrotado 40 enemigos, termina el juego
-        if (enemiesDefeated >= 40)
+        if (enemiesDefeated >= 10)
         {
             EndGame();
         }
@@ -43,5 +43,18 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = true;
         Debug.Log("¡Has ganado el juego! Tiempo transcurrido: " + timeElapsed + " segundos");
+        CanvasManager.referenceCanvas.GameOver();
+
+        // Guarda el highscore y el mejor tiempo si son mejores que los actuales
+        if (enemiesDefeated > PlayerPrefs.GetInt("Highscore", 0))
+        {
+            PlayerPrefs.SetInt("Highscore", enemiesDefeated);
+        }
+        if (timeElapsed < PlayerPrefs.GetFloat("BestTime", float.MaxValue))
+        {
+            PlayerPrefs.SetFloat("BestTime", timeElapsed);
+        }
+
+        PlayerPrefs.Save();
     }
 }
